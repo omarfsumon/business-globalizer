@@ -1,0 +1,535 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth font-roboto;
+    }
+
+    body {
+        @apply bg-gray-50 text-gray-800 font-roboto leading-normal tracking-normal custom-scrollbar;
+    }
+
+    /* Theme base style with higher specificity */
+    .prose.single-post h1,
+    .prose.single-post h2,
+    .prose.single-post h3,
+    .prose.single-post h4,
+    .prose.single-post h5,
+    .prose.single-post h6 {
+        scroll-margin-top: 100px;
+    }
+
+    .prose.single-post h1 {
+        @apply text-4xl font-semibold my-6;
+    }
+
+    .prose.single-post h2 {
+        @apply text-3xl font-medium my-5;
+    }
+
+    .prose.single-post h3 {
+        @apply text-xl font-medium my-4;
+    }
+
+    .prose.single-post h4 {
+        @apply text-xl font-medium my-3;
+    }
+
+    .prose.single-post h5 {
+        @apply text-base font-medium my-2;
+    }
+
+    .prose.single-post h6 {
+        @apply text-sm font-medium my-2 uppercase;
+    }
+
+    .prose.single-post p {
+        @apply mb-4 leading-relaxed;
+    }
+
+    .prose.single-post ul {
+        @apply list-disc ml-8 my-4;
+    }
+
+    .prose.single-post ol {
+        @apply list-decimal ml-6 my-4;
+    }
+
+    .prose.single-post li {
+        @apply mb-2 ml-4 leading-relaxed;
+    }
+
+    .prose.single-post blockquote {
+        @apply border-l-4 border-gray-300 pl-4 my-6 py-6 rounded-xl italic text-gray-600 bg-gray-50;
+    }
+
+    .prose.single-post .key_insights {
+        @apply pl-9 pr-5 pt-5 pb-5 bg-primary-50/50 rounded-xl border-2 border-dashed border-primary-600;
+    }
+
+    .prose.single-post .key_insights li {
+        @apply px-0 ml-4 leading-relaxed;
+    }
+
+    .prose.single-post ol.key_insights {
+        @apply !mt-0 !ml-0 !mb-8;
+    }
+
+    .prose.single-post .key_insights:before {
+        content: 'key insights';
+        @apply text-2xl capitalize font-medium -ml-5 pb-3 block;
+    }
+
+    /* Theme style policy page */
+    #content h1 {
+        @apply text-4xl font-semibold my-6;
+    }
+
+    #content h2 {
+        @apply text-3xl font-medium my-5;
+    }
+
+    #content h3 {
+        @apply text-xl font-medium my-4;
+    }
+
+    #content h4 {
+        @apply text-xl font-medium my-3;
+    }
+
+    #content h5 {
+        @apply text-base font-medium my-2;
+    }
+
+    #content h6 {
+        @apply text-sm font-medium my-2 uppercase;
+    }
+
+    #content p {
+        @apply mb-4 leading-relaxed;
+    }
+
+    #content ul {
+        @apply list-disc ml-8 my-4;
+    }
+
+    #content ol {
+        @apply list-decimal ml-6 my-4;
+    }
+
+    #content li {
+        @apply mb-2 ml-4 leading-relaxed;
+    }
+
+    #content blockquote {
+        @apply border-l-4 border-gray-300 pl-4 my-6 italic text-gray-600 bg-gray-50;
+    }
+
+    table {
+        @apply w-full border-collapse my-6 bg-white;
+    }
+
+    th,
+    td {
+        @apply border border-gray-300 p-3 text-left;
+    }
+
+    th {
+        @apply bg-gray-100 font-semibold;
+    }
+
+    tr:nth-child(even) {
+        @apply bg-gray-50;
+    }
+
+    /*Theme Base Style End*/
+
+    /* Remove browser default focus styles while preserving custom ones */
+    input:focus,
+    textarea:focus,
+    select:focus,
+    button:focus {
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Remove default form element styling */
+    input,
+    textarea,
+    select,
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* Remove specific browser default styles */
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    /* Remove spinner buttons from number inputs */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    /* Remove default select arrow */
+    select {
+        background-image: none;
+    }
+
+    /* Remove default radio and checkbox styling while keeping functionality */
+    input[type="radio"],
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/roboto/Roboto-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/roboto/Roboto-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/roboto/Roboto-SemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/roboto/Roboto-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Onest';
+        src: url('../font/onest/Onest-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Onest';
+        src: url('../font/onest/Onest-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Onest';
+        src: url('../font/onest/Onest-SemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Onest';
+        src: url('../font/onest/Onest-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-display: swap;
+    }
+}
+
+@layer components {
+
+    /* Container styles */
+    .container {
+        @apply max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .header_menu>li>a {
+        @apply uppercase font-medium;
+    }
+
+    .current_page_item>a {
+        @apply text-green-600;
+    }
+
+    #mobile-menu.active {
+        @apply translate-x-0;
+    }
+
+    @media (max-width: 1023px) {
+        #mobile-menu-items .menu-item {
+            @apply block w-full;
+        }
+
+        #mobile-menu-items .menu-item>a {
+            @apply block w-full p-1.5 text-gray-800 uppercase;
+        }
+
+        #mobile-menu-items .menu-item>a .dropdown-toggle {
+            @apply flex flex-row justify-between items-center w-full text-gray-800 uppercase transition-all duration-300 rounded;
+        }
+
+        #mobile-menu-items .sub-menu {
+            @apply mt-1 space-y-1 pl-4;
+        }
+
+        #mobile-menu-items .sub-menu>li>a {
+            @apply block px-4 py-2 text-gray-700;
+        }
+
+        .menu-item-icon,
+        .menu-item-description {
+            @apply hidden;
+        }
+    }
+
+    /* Custom scrollbar for mega menu */
+    .sub-menu::-webkit-scrollbar {
+        @apply w-1;
+    }
+
+    .sub-menu::-webkit-scrollbar-track {
+        @apply bg-gray-100 rounded;
+    }
+
+    .sub-menu::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 rounded hover:bg-gray-400 transition-colors;
+    }
+
+    .button_primary {
+        @apply px-6 py-2.5 bg-orange-600 text-white rounded hover:bg-orange-800 transition-colors;
+    }
+
+    .button_secondary {
+        @apply px-6 py-2.5 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors;
+    }
+}
+
+@layer utilities {
+
+    /* Custom scrollbar styles */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #02cb9a;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: #e5e7eb;
+    }
+
+    .site_logo img {
+        @apply h-12 w-auto;
+    }
+
+    /* Jet Form Builder Styles */
+    #newsletter .jet-form-builder-col__start {
+        @apply !hidden;
+    }
+
+    #newsletter form {
+        @apply relative flex flex-row px-1 md:w-[450px] w-[250px] bg-[#e8f0fe] items-center rounded-lg;
+    }
+
+    #newsletter input {
+        @apply p-2.5 w-full bg-[#e8f0fe] focus:bg-[#e8f0fe];
+    }
+
+    #newsletter button {
+        @apply absolute right-1 top-1/2 -translate-y-1/2 md:px-10 px-5 py-2.5 bg-orange-500 text-white rounded hover:bg-orange-700 transition-colors text-lg font-normal text-nowrap;
+    }
+
+    #newsletter .jet-form-builder-messages-wrap {
+        @apply w-full absolute -bottom-10 text-base;
+    }
+
+    #newsletter .jet-form-builder-message {
+        @apply border-none p-0 mt-5;
+    }
+
+    .tab-name {
+        @apply z-10 block w-full px-0 md:py-2 py-1 text-base font-normal transition-all ease-in-out md:rounded-full rounded-lg cursor-pointer text-slate-600 bg-inherit;
+    }
+
+    .tab-content {
+        @apply transition-all duration-300 ease-in-out border border-gray-200 p-6 rounded-lg shadow;
+    }
+
+    .active_tab {
+        @apply !bg-white !text-primary-600 !shadow;
+    }
+
+    /* Jet Form Builder */
+    .contact_page .jet-form-builder__label {
+        @apply hidden;
+        /* only contact page */
+    }
+
+    .content_form form {
+        @apply bg-white p-6 rounded-lg shadow;
+    }
+
+    .content_form .jet-form-builder__label {
+        @apply mb-2;
+    }
+
+    .content_form input,
+    .content_form select,
+    .content_form textarea {
+        @apply p-3 rounded w-full bg-[#f4f4f4] focus:bg-[#f4f4f4] border border-gray-300 focus:border focus:border-secondary-500;
+    }
+
+    .content_form .checkradio-wrap {
+        @apply flex !flex-row !items-center !justify-around !gap-2 !flex-nowrap !w-full;
+    }
+
+    .content_form .checkradio-wrap label {
+        @apply !w-full flex !flex-col !items-center !justify-center md:px-3 md:py-3 py-3 px-1 bg-[#f4f4f4] rounded cursor-pointer;
+    }
+
+    .content_form input[type="radio"] {
+        @apply !block !w-full;
+    }
+
+    .content_form button {
+        @apply px-10 py-2.5 !inline-flex !justify-center bg-orange-500 text-white rounded hover:bg-orange-700 transition-colors text-lg font-medium w-full mt-5;
+    }
+
+    .content_form .jet-form-builder-message {
+        @apply border-none text-xl;
+    }
+
+    details {
+        @apply mb-2 rounded p-2 bg-white border border-slate-200 shadow-sm;
+    }
+
+    summary {
+        @apply cursor-pointer p-3 border-gray-200 text-base font-semibold leading-5 flex items-center justify-between text-slate-700 list-none;
+    }
+
+    details p {
+        @apply mt-2 !mb-0 p-3 transition-all duration-500 ease-in-out;
+    }
+}
+
+.author_bio {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Pagination styles */
+.pagination-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 2rem 0 !important;
+}
+
+.page-numbers {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+}
+
+.page-numbers:hover:not(.current, .disabled) {
+    background-color: #f3f4f6 !important;
+    color: #00a47e !important;
+    border-color: #e5e7eb !important;
+}
+
+.page-numbers.current {
+    z-index: 10 !important;
+    color: #ffffff !important;
+    background-color: #00a47e !important;
+    border-color: #00a47e !important;
+}
+
+.page-numbers.current:hover {
+    background-color: #00a47e !important;
+}
+
+.page-numbers.disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    background-color: #f9fafb !important;
+    color: #9ca3af !important;
+    pointer-events: none !important;
+}
+
+.page-numbers.next,
+.page-numbers.prev {
+    font-weight: 500 !important;
+}
+
+.page-numbers.next:hover,
+.page-numbers.prev:hover {
+    background-color: #ebf5ff !important;
+    color: #00a47e !important;
+}
+
+/* TOC active link styling */
+.toc-link {
+    position: relative;
+    text-decoration: none !important;
+}
+
+.toc-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: #00a47e;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.toc-active {
+    color: #00a47e !important;
+}
+
+.toc-active::after {
+    transform: scaleX(1);
+}
+
+.jet-form-builder-row {
+    display: flex;
+    flex-wrap: nowrap !important;
+    flex-direction: column;
+}

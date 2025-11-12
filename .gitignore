@@ -1,0 +1,32 @@
+# Ignore Node dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+.cache/
+.tmp/
+
+# Environment files
+.env
+.env.local
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Sass cache
+.sass-cache/
+
+# PHP Composer (if used)
+vendor/
+composer.phar
+
+# Temporary files
+*.tmp
