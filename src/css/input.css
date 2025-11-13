@@ -248,12 +248,12 @@
 
   .logo-slider-wrapper::before {
     @apply left-0;
-    background: linear-gradient(to right, #f9fafb, transparent);
+    background: linear-gradient(to right, #fff, transparent);
   }
 
   .logo-slider-wrapper::after {
     @apply right-0;
-    background: linear-gradient(to left, #f9fafb, transparent);
+    background: linear-gradient(to left, #fff, transparent);
   }
 
   .logo-slider {
